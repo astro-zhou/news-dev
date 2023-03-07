@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-<!--    news-dev-model:
-        模型工程
-        所有的子工程以及微服务中所涉及到的模型实体类 都在此管理
-        可以包含一些 *pojo, *Bean, *Entity, vo, bo, dto 等-->
+    <!--    news-dev-model:
+            模型工程
+            所有的子工程以及微服务中所涉及到的模型实体类 都在此管理
+            可以包含一些 *pojo, *Bean, *Entity, vo, bo, dto 等-->
     <artifactId>news-dev-model</artifactId>
 
     <dependencies>
@@ -21,11 +21,40 @@
             <artifactId>news-dev-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!-- mysql 驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- 通用mapper逆向工具 -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- pagehelper -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+
 
 </project>

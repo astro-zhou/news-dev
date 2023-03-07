@@ -1,6 +1,8 @@
 package com.zhou.user.controller;
 
 import com.zhou.api.controller.user.HelloControllerApi;
+import com.zhou.grace.result.GraceJSONResult;
+import com.zhou.grace.result.JSONResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,10 @@ public class HelloController implements HelloControllerApi {
         logger.warn("warn: hello~");
         logger.error("error: hello~");
 
-        return "hello";
+//        return "hello";
+//        return JSONResult.ok();
+//        return JSONResult.ok("hello");
+//        return JSONResult.errorMsg("您的信息有误!");
+        return GraceJSONResult.ok();
     }
 }

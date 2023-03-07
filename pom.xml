@@ -14,10 +14,13 @@
         <module>news-dev-service-user</module>
     </modules>
 
-    <!--    1. 聚合工程可以分为顶级项目(顶级工程,父工程)与子工程(子module模块),
-            这两者就是父子继承关系,子工程在Maven中称为module,
-        2. 子模块可以使用顶级工程中所有资源(依赖),子模块间如果有要使用资源的话,必须构建依赖(构建关系)
-        3. 一个顶级工程可由多个不同的子工程共同组合而成.-->
+    <!--
+        1. 聚合工程可以分为顶级项目（顶级工程，父工程）与子工程（子module模块），
+            这两者的关系其实就是父子继承的关系，子工程在maven中可以称之为module，
+            模块与模块之间是平级的，是可以相互依赖的。
+        2. 子模块可以使用顶级工程中所有的资源（依赖），子模块之间如果有要使用资源的话，必须构建依赖（构建关系）
+        3. 一个顶级工程是可以由多个不同的子工程共同组合而成。
+    -->
     <packaging>pom</packaging>
 
     <parent>
@@ -28,9 +31,6 @@
     </parent>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -68,7 +68,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR1</version>
+                <version>Hoxton.SR3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -78,7 +78,7 @@
                 <groupId>org.mongodb</groupId>
                 <artifactId>mongodb-driver</artifactId>
                 <!--mongodb-driver.version-->
-                <version>3.3.0</version>
+                <version>3.11.1</version>
             </dependency>
 
             <!-- mysql 驱动 -->
