@@ -1,11 +1,17 @@
 package com.zhou.api.controller.user;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.validation.Valid;
 
 /**
  * @author zyh
  * @create 2023-02-03 15:43
  */
+
+@Api(value = "controller的标题", tags = {"xx功能的controller"})
 public interface HelloControllerApi {
 
     /**
@@ -36,6 +42,8 @@ public interface HelloControllerApi {
      *
      * 综上所述，如此做法，可以提高多服务项目的可扩展性。
      */
+
+    @ApiOperation(value = "hello方法的接口", notes = "hello方法的接口", httpMethod = "GET")
     @GetMapping("/hello")
     public Object hello();
 }

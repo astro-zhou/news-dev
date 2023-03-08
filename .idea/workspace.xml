@@ -5,49 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/generatorConfig-admin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/generatorConfig-article.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/generatorConfig-user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/admin/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/article/mapper/ArticleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/article/mapper/CommentsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/my/mapper/MyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/mybatis/utils/AdminGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/mybatis/utils/ArticleGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/java/com/zhou/mybatis/utils/UserGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/resources/mapper/article/ArticleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/src/main/resources/mapper/article/CommentsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/META-INF/mybatis-generator-database.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/com/imooc/admin/mapper/CategoryMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/com/imooc/pojo/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/mapper/admin/AdminUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/mapper/admin/CategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/mapper/article/ArticleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/classes/mapper/article/CommentsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-generator-database/target/mybatis-generator-database-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/grace/result/GraceJSONResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/grace/result/ResponseStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-model/src/main/java/com/zhou/pojo/AppUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-model/src/main/java/com/zhou/pojo/Fans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/my/mapper/MyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/mapper/AppUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/mapper/FansMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/mapper/AppUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/mapper/FansMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/Swagger2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/HelloControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/HelloControllerApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +130,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="15521000" />
+      <workItem from="1678078524328" duration="21704000" />
     </task>
     <servers />
   </component>

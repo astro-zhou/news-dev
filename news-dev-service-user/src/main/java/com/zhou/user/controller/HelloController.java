@@ -17,6 +17,7 @@ public class HelloController implements HelloControllerApi {
 
     final static Logger logger = LoggerFactory.getLogger(HelloController.class);
 
+//    Swagger2 文档生成工具
     public Object hello(){
 
         logger.debug("debug: hello~");
