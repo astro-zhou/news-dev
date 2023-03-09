@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/Swagger2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils/extend/AliyunResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/resources/aliyun.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/HelloControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/HelloControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-common/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +115,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="" />
@@ -130,7 +132,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="21704000" />
+      <workItem from="1678078524328" duration="24080000" />
     </task>
     <servers />
   </component>
