@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-<!--   news-dev-common:
-        通用工程
-        包含了一些工具类, 枚举类, 封装的公用方法, 第三方组件等  -->
+    <!--   news-dev-common:
+            通用工程
+            包含了一些工具类, 枚举类, 封装的公用方法, 第三方组件等  -->
     <artifactId>news-dev-common</artifactId>
 
     <dependencies>
@@ -27,6 +27,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+
+        <!-- 第三方云厂商相关依赖 -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.5.0</version>
         </dependency>
     </dependencies>
 
