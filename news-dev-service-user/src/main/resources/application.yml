@@ -30,6 +30,8 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  main:
+    allow-bean-definition-overriding: true  #启用 beans 覆盖机制
 
 # mybatis 配置
 mybatis:
@@ -47,4 +49,5 @@ mapper:
 pagehelper:
   helperDialect: mysql
   supportMethodsArguments: true
+
 

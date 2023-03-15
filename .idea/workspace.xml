@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils/IPUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/InterceptorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/PassportInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/PassportControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/PassportControllerApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mac/IdeaProjects/news-dev/news-dev-common/src/main/java/com/zhou/utils",
+    "last_opened_file_path": "/Users/mac/IdeaProjects/news-dev/news-dev-service-api/src/main/java/com/zhou/api/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,11 +73,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config" />
       <recent name="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils" />
       <recent name="$PROJECT_DIR$/news-dev-service-user/src/main/resources/mapper" />
       <recent name="$PROJECT_DIR$/news-dev-service-api/src/main/java" />
       <recent name="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/mapper" />
-      <recent name="$PROJECT_DIR$/news-dev-model/src/main/java/com/zhou/pojo" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zhou.utils" />
@@ -138,7 +140,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="35746000" />
+      <workItem from="1678078524328" duration="55248000" />
     </task>
     <servers />
   </component>
