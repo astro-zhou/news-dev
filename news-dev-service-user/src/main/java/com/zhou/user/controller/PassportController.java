@@ -2,25 +2,24 @@ package com.zhou.user.controller;
 
 import com.zhou.api.BaseController;
 import com.zhou.api.controller.user.PassportControllerApi;
+import com.zhou.enums.UserStatus;
 import com.zhou.grace.result.GraceJSONResult;
 import com.zhou.grace.result.ResponseStatusEnum;
+import com.zhou.pojo.AppUser;
 import com.zhou.pojo.bo.RegistLoginBO;
+import com.zhou.user.service.UserService;
 import com.zhou.utils.IPUtil;
 import com.zhou.utils.SMSUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.bind.BindResult;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -37,6 +36,9 @@ public class PassportController extends BaseController implements PassportContro
     @Autowired
     private SMSUtils smsUtils;
 
+    @Autowired
+    private UserService userService;
+
     @Override
     public GraceJSONResult getSMSCode(String mobile, HttpServletRequest request) {
 
@@ -47,7 +49,7 @@ public class PassportController extends BaseController implements PassportContro
         redis.setnx60s(MOBILE_SMSCODE + ":" + userIp, userIp);
 
         // 生成随机验证码, 并且发送短信
-        String random = String.valueOf((Math.random() * 9 + 1) * 10000);    //5位数
+        String random = (int)((Math.random() * 9 + 1) * 10000) + "";    //5位整数
         smsUtils.sendSMS("15838786860", random);
 
         // 把验证码存入 redis, 用于后续验证
@@ -75,6 +77,16 @@ public class PassportController extends BaseController implements PassportContro
             return GraceJSONResult.errorCustom(ResponseStatusEnum.SMS_CODE_ERROR);
         }
 
-        return GraceJSONResult.ok();
+        // 2. 查询数据库, 判断该用户是否注册
+        AppUser user = userService.queryMobileIsExist(mobile);
+        if (user != null && user.getActiveStatus() == UserStatus.FROZEN.type) {
+            // 如果用户不为空, 并且状态为冻结, 则直接抛出异常, 禁止登录
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.USER_FROZEN);
+        } else if (user == null) {
+            // 如果用户没有注册过, 则为null, 需要注册信息入库
+            user = userService.createUser(mobile);
+        }
+
+        return GraceJSONResult.ok(user);
     }
 }

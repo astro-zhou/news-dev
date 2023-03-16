@@ -5,12 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/news-dev-model/src/main/java/com/zhou/pojo/bo/RegistLoginBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/ArticleAppointType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/ArticleCoverType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/ArticleReviewLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/ArticleReviewStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/FaceVerifyType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/PayMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/Sex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/UserStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/enums/YesOrNo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils/DesensitizationUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/Code.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/DayCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/Id.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/IdWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/InvalidSystemClock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/RandomCodeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/Sid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/WorkerIdStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/strategy/DayPrefixRandomCodeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/strategy/DefaultRandomCodeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/strategy/DefaultWorkerIdStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/strategy/FileLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/utils/HttpReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/utils/IPv4Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/utils/Ip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/utils/Props.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/utils/Serializes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/org/n3r/idworker/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils/SMSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils/SMSUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/PassportControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/PassportControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/mapper/AppUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/mapper/AppUserMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +87,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mac/IdeaProjects/news-dev/news-dev-service-api/src/main/java/com/zhou/api/config",
+    "last_opened_file_path": "/Users/mac/IdeaProjects/news-dev/news-dev-common/src/main/java/com/zhou",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,13 +101,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config" />
+      <recent name="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou" />
       <recent name="$PROJECT_DIR$/news-dev-common/src/main/java/com/zhou/utils" />
+      <recent name="$PROJECT_DIR$/news-dev-common/src/main/java" />
+      <recent name="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config" />
       <recent name="$PROJECT_DIR$/news-dev-service-user/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/news-dev-service-api/src/main/java" />
-      <recent name="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zhou.utils" />
@@ -139,7 +173,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="64021000" />
+      <workItem from="1678078524328" duration="73508000" />
     </task>
     <servers />
   </component>
