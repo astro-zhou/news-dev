@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 /**
@@ -26,5 +27,8 @@ public interface PassportControllerApi {
 
     @ApiOperation(value = "一键注册登录接口", notes = "一键注册登录接口", httpMethod = "POST")
     @PostMapping("/doLogin")
-    public GraceJSONResult doLogin(@RequestBody @Valid RegistLoginBO registLoginBO, BindingResult result);
+    public GraceJSONResult doLogin(@RequestBody @Valid RegistLoginBO registLoginBO,
+                                   BindingResult result,
+                                   HttpServletRequest request,
+                                   HttpServletResponse response);
 }
