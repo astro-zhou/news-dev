@@ -7,3 +7,7 @@ spring:
     host: 192.168.0.10
     port: 6379
     password: abc123456
+
+# 设置域名, 在 java 代码中获取, 这里是资源配置
+website:
+  domain-name: imoocnews.com

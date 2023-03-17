@@ -2,12 +2,14 @@ package com.zhou.api;
 
 import com.zhou.utils.RedisOperator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -28,6 +30,9 @@ public class BaseController {
 
     public static final String MOBILE_SMSCODE = "mobile:smscode";
     public static final String REDIS_USER_TOKEN = "redis_user_token";
+
+    @Value("${website.domain-name}")
+    public String DOMAIN_NAME;
     public static final Integer COOKIE_MONTH = 30 * 24 * 60 * 60;
 
     /**
@@ -70,7 +75,8 @@ public class BaseController {
                                Integer maxAge) {
         Cookie cookie = new Cookie(cookieName, cookieValue);
         cookie.setMaxAge(maxAge);
-        cookie.setDomain("imoocnews.com");
+//        cookie.setDomain("imoocnews.com");
+        cookie.setDomain(DOMAIN_NAME);
         cookie.setPath("/");
         response.addCookie(cookie);
     }
