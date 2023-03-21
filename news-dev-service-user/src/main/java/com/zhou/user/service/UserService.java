@@ -1,10 +1,11 @@
 package com.zhou.user.service;
 
 import com.zhou.pojo.AppUser;
+import com.zhou.pojo.bo.UpdateUserInfoBO;
 import org.springframework.stereotype.Service;
 
 /**
- * @Description:
+ * @Description: User 功能接口
  * @Author: yuhang
  * @Date: 2023/3/15 20:39
  * @Version: 1.0
@@ -31,4 +32,11 @@ public interface UserService {
      * @return
      */
     public AppUser getUser(String userId);
+
+    /**
+     * 用户完善信息, 完善资料, 并且激活
+     * @param updateUserInfoBO
+     * @return
+     */
+    public void updateUserInfo(UpdateUserInfoBO updateUserInfoBO);
 }

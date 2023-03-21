@@ -2,11 +2,15 @@ package com.zhou.user.service;
 
 import com.zhou.enums.Sex;
 import com.zhou.enums.UserStatus;
+import com.zhou.exception.GraceException;
+import com.zhou.grace.result.ResponseStatusEnum;
 import com.zhou.pojo.AppUser;
+import com.zhou.pojo.bo.UpdateUserInfoBO;
 import com.zhou.user.mapper.AppUserMapper;
 import com.zhou.utils.DateUtil;
 import com.zhou.utils.DesensitizationUtil;
 import org.n3r.idworker.Sid;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -78,5 +82,20 @@ public class UserServiceImpl implements UserService{
     @Override
     public AppUser getUser(String userId) {
         return appUserMapper.selectByPrimaryKey(userId);
+    }
+
+    @Override
+    public void updateUserInfo(UpdateUserInfoBO updateUserInfoBO) {
+
+        AppUser userInfo = new AppUser();
+        BeanUtils.copyProperties(updateUserInfoBO, userInfo);
+
+        userInfo.setUpdatedTime(new Date());
+        userInfo.setActiveStatus(UserStatus.ACTIVE.type);
+
+        int result = appUserMapper.updateByPrimaryKeySelective(userInfo);
+        if (result != 1) {
+            GraceException.display(ResponseStatusEnum.USER_UPDATE_ERROR);
+        }
     }
 }
