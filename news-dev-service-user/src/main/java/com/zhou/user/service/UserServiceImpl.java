@@ -9,6 +9,8 @@ import com.zhou.pojo.bo.UpdateUserInfoBO;
 import com.zhou.user.mapper.AppUserMapper;
 import com.zhou.utils.DateUtil;
 import com.zhou.utils.DesensitizationUtil;
+import com.zhou.utils.JsonUtils;
+import com.zhou.utils.RedisOperator;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,11 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     public Sid sid;
+
+    @Autowired
+    private RedisOperator redis;
+
+    public static final String REDIS_USER_INFO = "redis_user_info";
 
     private static final String USER_FACE0 = "https://s2.loli.net/2023/03/15/c5pfwhgxUSdiIb4.jpg";
     private static final String USER_FACE1 = "https://s2.loli.net/2023/03/15/YQLtI91x5bpSWgn.jpg";
@@ -87,6 +94,8 @@ public class UserServiceImpl implements UserService{
     @Override
     public void updateUserInfo(UpdateUserInfoBO updateUserInfoBO) {
 
+        String userId = updateUserInfoBO.getId();
+
         AppUser userInfo = new AppUser();
         BeanUtils.copyProperties(updateUserInfoBO, userInfo);
 
@@ -97,5 +106,10 @@ public class UserServiceImpl implements UserService{
         if (result != 1) {
             GraceException.display(ResponseStatusEnum.USER_UPDATE_ERROR);
         }
+
+        // 再次查询用户的最新信息, 放入 redis 中
+        AppUser user = getUser(userId);
+        redis.set(REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
+
     }
 }
