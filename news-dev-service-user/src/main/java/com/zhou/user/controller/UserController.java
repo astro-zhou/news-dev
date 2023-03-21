@@ -6,6 +6,7 @@ import com.zhou.grace.result.GraceJSONResult;
 import com.zhou.grace.result.ResponseStatusEnum;
 import com.zhou.pojo.AppUser;
 import com.zhou.pojo.bo.UpdateUserInfoBO;
+import com.zhou.pojo.vo.AppUserVO;
 import com.zhou.pojo.vo.UserAccountInfoVO;
 import com.zhou.user.service.UserService;
 import org.apache.commons.lang3.StringUtils;
@@ -34,6 +35,24 @@ public class UserController extends BaseController implements UserControllerApi 
 
     @Autowired
     private UserService userService;
+
+    @Override
+    public GraceJSONResult getUserInfo(String userId) {
+
+        // 0. 判断参数不能为空
+        if (StringUtils.isBlank(userId)) {
+            return GraceJSONResult.errorCustom(ResponseStatusEnum.UN_LOGIN);
+        }
+
+        // 1. 根据 userId 查询用户信息
+        AppUser user = getUser(userId);
+
+        // 2. 返回用户信息
+        AppUserVO userVO = new AppUserVO();
+        BeanUtils.copyProperties(user, userVO);
+
+        return GraceJSONResult.ok(userVO);
+    }
 
     @Override
     public GraceJSONResult getAccountInfo(String userId) {

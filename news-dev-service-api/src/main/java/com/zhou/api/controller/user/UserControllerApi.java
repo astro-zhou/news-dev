@@ -21,6 +21,10 @@ import javax.validation.Valid;
 @RequestMapping("user")
 public interface UserControllerApi {
 
+    @ApiOperation(value = "获得用户基本信息", notes = "获得用户基本信息", httpMethod = "POST")
+    @PostMapping("/getUserInfo")
+    public GraceJSONResult getUserInfo(@RequestParam String userId);
+
     @ApiOperation(value = "获得用户账户信息", notes = "获得用户账户信息", httpMethod = "POST")
     @PostMapping("/getAccountInfo")
     public GraceJSONResult getAccountInfo(@RequestParam String userId);
