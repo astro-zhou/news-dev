@@ -95,6 +95,8 @@ public class UserServiceImpl implements UserService{
     public void updateUserInfo(UpdateUserInfoBO updateUserInfoBO) {
 
         String userId = updateUserInfoBO.getId();
+        // 保证双写一致, 先删除 redis 中的数据, 后更新数据库
+        redis.del(REDIS_USER_INFO + ":" + userId);
 
         AppUser userInfo = new AppUser();
         BeanUtils.copyProperties(updateUserInfoBO, userInfo);
@@ -111,5 +113,12 @@ public class UserServiceImpl implements UserService{
         AppUser user = getUser(userId);
         redis.set(REDIS_USER_INFO + ":" + userId, JsonUtils.objectToJson(user));
 
+        // 缓存双删策略
+        try {
+            Thread.sleep(100);
+            redis.del(REDIS_USER_INFO + ":" + userId);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
