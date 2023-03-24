@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/BaseInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/UserTokenInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/InterceptorConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +83,11 @@
       <recent name="com.zhou.utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhou.api.interceptors" />
       <recent name="com.zhou.pojo.vo" />
       <recent name="com.zhou.pojo.bo" />
       <recent name="com.zhou.user.controller" />
       <recent name="com.zhou.api.controller.user" />
-      <recent name="com.zhou.my.mapper" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
@@ -140,7 +142,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="123113000" />
+      <workItem from="1678078524328" duration="125800000" />
     </task>
     <servers />
   </component>
