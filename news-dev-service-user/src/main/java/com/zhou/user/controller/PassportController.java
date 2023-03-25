@@ -9,6 +9,7 @@ import com.zhou.pojo.AppUser;
 import com.zhou.pojo.bo.RegistLoginBO;
 import com.zhou.user.service.UserService;
 import com.zhou.utils.IPUtil;
+import com.zhou.utils.JsonUtils;
 import com.zhou.utils.SMSUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -98,6 +99,7 @@ public class PassportController extends BaseController implements PassportContro
             // 保存 token 到 redis
             String uToken = UUID.randomUUID().toString();
             redis.set(REDIS_USER_TOKEN + ":" + user.getId(), uToken);
+            redis.set(REDIS_USER_INFO + ":" + user.getId(), JsonUtils.objectToJson(user));
 
             // 保存用户 id 和 token 到 cookie 中
             setCookie(request, response, "utoken", uToken, COOKIE_MONTH);

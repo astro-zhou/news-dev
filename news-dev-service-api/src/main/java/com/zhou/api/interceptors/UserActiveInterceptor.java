@@ -1,5 +1,13 @@
 package com.zhou.api.interceptors;
 
+import com.zhou.enums.UserStatus;
+import com.zhou.exception.GraceException;
+import com.zhou.grace.result.ResponseStatusEnum;
+import com.zhou.pojo.AppUser;
+import com.zhou.utils.JsonUtils;
+import com.zhou.utils.RedisOperator;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,6 +30,7 @@ public class UserActiveInterceptor extends BaseInterceptor implements HandlerInt
 
     /**
      * 拦截请求，访问controller之前
+     *
      * @param request
      * @param response
      * @param handler
@@ -31,13 +40,22 @@ public class UserActiveInterceptor extends BaseInterceptor implements HandlerInt
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        String userId = request.getHeader("headerUerId");
-        String userToken = request.getHeader("headerUerToken");
+        String userId = request.getHeader("headerUserId");
 
-        // 判断是否放行
-        boolean run = verifyUserIdToken(userId, userToken, REDIS_USER_TOKEN);
+        // 查询判断 redis 中是否包含用户信息, 若包含, 则查询后直接返回, 就不去查询数据库了
+        String userJson = redis.get(REDIS_USER_INFO + ":" + userId);
+        AppUser user = null;
+        if (StringUtils.isNotBlank(userJson)) {
+            user = JsonUtils.jsonToPojo(userJson, AppUser.class);
+        } else {
+            GraceException.display(ResponseStatusEnum.UN_LOGIN);
+            return false;
+        }
 
-        System.out.println(run);
+        if (user.getActiveStatus() == null || user.getActiveStatus() != UserStatus.ACTIVE.type) {
+            GraceException.display(ResponseStatusEnum.USER_INACTIVE_ERROR);
+        }
+
 
         /**
          * false：请求被拦截
@@ -49,6 +67,7 @@ public class UserActiveInterceptor extends BaseInterceptor implements HandlerInt
 
     /**
      * 请求访问到controller之后，渲染视图之前
+     *
      * @param request
      * @param response
      * @param handler
@@ -62,6 +81,7 @@ public class UserActiveInterceptor extends BaseInterceptor implements HandlerInt
 
     /**
      * 请求访问到controller之后，渲染视图之后
+     *
      * @param request
      * @param response
      * @param handler

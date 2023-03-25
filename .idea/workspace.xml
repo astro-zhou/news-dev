@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/UserActiveInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/UserTokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/UserTokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/config/InterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/BaseInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/BaseInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/UserActiveInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/interceptors/UserActiveInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.editor",
+    "settings.editor.selected.configurable": "inlay.hints",
     "spring.configuration.checksum": "1cd6468246ac5a8bfa1748c16de55c3f",
     "vue.rearranger.settings.migration": "true"
   }
@@ -141,7 +143,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="128088000" />
+      <workItem from="1678078524328" duration="130115000" />
     </task>
     <servers />
   </component>

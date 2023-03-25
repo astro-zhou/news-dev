@@ -1,6 +1,7 @@
 package com.zhou.api.config;
 
 import com.zhou.api.interceptors.PassportInterceptor;
+import com.zhou.api.interceptors.UserActiveInterceptor;
 import com.zhou.api.interceptors.UserTokenInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,14 +27,22 @@ public class InterceptorConfig implements WebMvcConfigurer {
         return new UserTokenInterceptor();
     }
 
+    @Bean
+    public UserActiveInterceptor userActiveInterceptor() {
+        return new UserActiveInterceptor();
+    }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
         registry.addInterceptor(passportInterceptor())
                 .addPathPatterns("/passport/getSMSCode");
 
-        registry.addInterceptor(passportInterceptor())
+        registry.addInterceptor(userTokenInterceptor())
                 .addPathPatterns("/user/getAccountInfo")
                 .addPathPatterns("/user/updateUserInfo");
+
+//        registry.addInterceptor(userActiveInterceptor())
+//                .addPathPatterns("/passport/getAccountInfo");
     }
 }
