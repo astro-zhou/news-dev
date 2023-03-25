@@ -1,4 +1,4 @@
-package com.zhou.user.service;
+package com.zhou.user.service.impl;
 
 import com.zhou.enums.Sex;
 import com.zhou.enums.UserStatus;
@@ -7,6 +7,7 @@ import com.zhou.grace.result.ResponseStatusEnum;
 import com.zhou.pojo.AppUser;
 import com.zhou.pojo.bo.UpdateUserInfoBO;
 import com.zhou.user.mapper.AppUserMapper;
+import com.zhou.user.service.UserService;
 import com.zhou.utils.DateUtil;
 import com.zhou.utils.DesensitizationUtil;
 import com.zhou.utils.JsonUtils;
@@ -27,7 +28,7 @@ import java.util.Date;
  * @Version: 1.0
  **/
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     public AppUserMapper appUserMapper;

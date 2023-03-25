@@ -8,6 +8,11 @@ spring:
     port: 6379
     password: abc123456
 
+# 在 dev 环境开启 mybatis 的日志打印
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 # 设置域名, 在 java 代码中获取, 这里是资源配置
 website:
   domain-name: imoocnews.com
