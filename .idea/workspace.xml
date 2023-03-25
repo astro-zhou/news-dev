@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9423731e-ab0c-48a8-9be1-6f95fc4d8b10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/aspect/ServiceLogAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/PassportControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-api/src/main/java/com/zhou/api/controller/user/PassportControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/news-dev-service-user/src/main/java/com/zhou/user/controller/PassportController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,7 @@
       <workItem from="1675445223046" duration="2302000" />
       <workItem from="1675497152307" duration="1414000" />
       <workItem from="1675594188937" duration="57000" />
-      <workItem from="1678078524328" duration="135468000" />
+      <workItem from="1678078524328" duration="136243000" />
     </task>
     <servers />
   </component>
